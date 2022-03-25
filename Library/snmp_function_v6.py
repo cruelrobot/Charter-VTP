@@ -1,7 +1,8 @@
+from pysnmp.proto import rfc1902
 from pysnmp.entity.rfc3413.oneliner import cmdgen
 
 
-def snmp(action, cm_ipv6, community, oid, value):
+def snmp(action: str, cm_ipv6: str, community: str, oid: str, value: rfc1902):
     cmd_gen = cmdgen.CommandGenerator()
 
     if action == "get":

@@ -5,7 +5,6 @@ import paramiko
 def reserve(cm_mac: str, cm_ipv6: str):
     cnr_ip = '172.21.1.187'
 
-    print('CM MAC: ' + cm_mac)
     cnr = paramiko.SSHClient()
     cnr.set_missing_host_key_policy(paramiko.AutoAddPolicy())
     cnr.connect(cnr_ip, port=22, username='CNRv7.2.3.2', password='20040401')
